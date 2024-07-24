@@ -12,25 +12,28 @@
 		<constructor-arg>
 			<ref bean="addrBean1" />
 		</constructor-arg>
-	</bean>
-	<bean id="empbean2" class="emp.Employee">
-		<constructor-arg value="101" type="int" />
-		<constructor-arg value="Roger" />
-		<constructor-arg value="29" type="int" />
 		<constructor-arg>
-			<ref bean="addrBean1" />
+			<list>
+				<ref bean="task1" />
+				<ref bean="task2" />
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="1000" value="Yvette" />
+				<entry key="1001" value="Alice" />
+			</map>
 		</constructor-arg>
 	</bean>
-
-	<bean id="empbean3" class="emp.Employee">
-		<constructor-arg value="100" type="int" />
-		<constructor-arg value="Mike" />
-		<constructor-arg value="28" type="int" />
-		<constructor-arg>
-			<ref bean="addrBean1" />
-		</constructor-arg>
-	</bean>
-
+	<!-- <bean id="empbean2" class="emp.Employee"> <constructor-arg value="101" 
+		type="int" /> <constructor-arg value="Roger" /> <constructor-arg value="29" 
+		type="int" /> <constructor-arg> <ref bean="addrBean1" /> </constructor-arg> 
+		<constructor-arg> <list> <ref bean="task1" /> <ref bean="task2" /> </list> 
+		</constructor-arg> </bean> <bean id="empbean3" class="emp.Employee"> <constructor-arg 
+		value="100" type="int" /> <constructor-arg value="Mike" /> <constructor-arg 
+		value="28" type="int" /> <constructor-arg> <ref bean="addrBean1" /> </constructor-arg> 
+		<constructor-arg> <list> <ref bean="task1" /> <ref bean="task2" /> </list> 
+		</constructor-arg> </bean> -->
 	<bean id="addrBean1" class="emp.Address">
 		<constructor-arg value="1" type="int" />
 		<constructor-arg value="741 Northern Avenue Apt#A3" />
@@ -39,5 +42,19 @@
 		<constructor-arg value="30021" type="int" />
 		<constructor-arg value="Dekalb" />
 		<constructor-arg value="Country" />
+	</bean>
+
+	<bean id="task1" class="emp.Task">
+		<constructor-arg value="10" type="int" />
+		<constructor-arg value="User Service" />
+		<constructor-arg
+			value="Authentication and Authentication" />
+		<constructor-arg value="true" type="boolean" />
+	</bean>
+	<bean id="task2" class="emp.Task">
+		<constructor-arg value="11" type="int" />
+		<constructor-arg value="Product Service" />
+		<constructor-arg value="Create and View Products" />
+		<constructor-arg value="false" type="boolean" />
 	</bean>
 </beans>
