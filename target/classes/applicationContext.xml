@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!--Questions 1 -->
+	<bean id="question1" class="quiz.model.Question">
+		<constructor-arg value="Q1" />
+		<constructor-arg value="What Is Spring Framework ?" />
+		<constructor-arg>
+			<list>
+				<ref bean="possibleAnswer1a" />
+				<ref bean="possibleAnswer1b" />
+			</list>
+		</constructor-arg>
+	</bean>
+	<!--Possible Answers 1 -->
+	<bean id="possibleAnswer1a" class="quiz.model.PossibleAnswer">
+		<constructor-arg value="a" />
+		<constructor-arg value="Is a Java Framework" />
+		<constructor-arg value="5" type="float" />
+	</bean>
+	<bean id="possibleAnswer1b" class="quiz.model.PossibleAnswer">
+		<constructor-arg value="b" />
+		<constructor-arg value="Is a Python Framework" />
+		<constructor-arg value="0" type="float" />
+	</bean>
+	<!--Questions 2 -->
+	<bean id="question2" class="quiz.model.Question">
+		<constructor-arg value="Q2" />
+		<constructor-arg
+			value="What Are the Benefits of Using Spring?" />
+		<constructor-arg>
+			<list>
+				<ref bean="possibleAnswer2a" />
+				<ref bean="possibleAnswer2b" />
+			</list>
+		</constructor-arg>
+	</bean>
+	<!--Possible Answers 2 -->
+	<bean id="possibleAnswer2a" class="quiz.model.PossibleAnswer">
+		<constructor-arg value="a" />
+		<constructor-arg value="It helps Java beginners" />
+		<constructor-arg value="0" type="float" />
+	</bean>
+	<bean id="possibleAnswer2b" class="quiz.model.PossibleAnswer">
+		<constructor-arg value="b" />
+		<constructor-arg value="Is for Java seniors" />
+		<constructor-arg value="5" type="float" />
+	</bean>
+
+	<bean id="history" class="quiz.model.History">
+		<property name="studentId" value="studentId"></property>
+		<property name="studentName" value="studentName"></property>
+		<property name="answers">
+			<map>
+			</map>
+		</property>
+		<property name="totalGrades" value="0"></property>
+	</bean>
+</beans>
