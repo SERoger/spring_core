@@ -47,7 +47,7 @@ public class Main {
 	public static void menu() {
 		// Menu
 		System.out.println("1. Proceed");
-		System.out.println("2. Quit");
+		System.out.println("2. View Histoory");
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("\n Your choice here: ");
 		int choice = scanner.nextInt();

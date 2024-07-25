@@ -7,6 +7,10 @@ public class Question {
 	private String description;
 	private List<PossibleAnswer> possibleAnswers;
 	
+	public Question() {
+		super();
+	}
+
 	public Question(String id, String description, List<PossibleAnswer> possibleAnswers) {
 		this.id = id;
 		this.description = description;

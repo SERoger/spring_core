@@ -52,7 +52,8 @@
 	</bean>
 
 	<bean id="history" class="quiz.model.History">
-		<property name="studentId" value="studentId"></property>
+	<!--Getters and Setters	 -->
+			<property name="studentId" value="studentId"></property>
 		<property name="studentName" value="studentName"></property>
 		<property name="answers">
 			<map>

@@ -5,6 +5,12 @@ public class PossibleAnswer {
 	private String description;
 	private float grade;
 
+	
+	
+	public PossibleAnswer() {
+		super();
+	}
+
 	public PossibleAnswer(String id, String description, float grade) {
 		this.id = id;
 		this.description = description;
