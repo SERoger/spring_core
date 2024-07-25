@@ -57,4 +57,7 @@
 		<constructor-arg value="Create and View Products" />
 		<constructor-arg value="false" type="boolean" />
 	</bean>
+	<!--Parent Child -->
+	<bean id="child" parent="empbean1">
+	</bean>
 </beans>
